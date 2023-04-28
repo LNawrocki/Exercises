@@ -17,11 +17,15 @@ public class Main {
 
         Lntool.printIntTable(intTab);
         System.out.println();
+
         Lntool.printStringTable(strTab);
         System.out.println();
+
         Lntool.printStringArr(strArr);
         System.out.println();
+
         Lntool.printIntArr(intArr);
+        System.out.println(Lntool.writeStringListToFile("LNawro", "Luki", "LN.txt"));
 
     }
 }

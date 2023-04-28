@@ -1,20 +1,90 @@
 package pl.coderslab;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Lntool {
 
-    public boolean writeLineToFile() {
+//    OPEN FROM FILE    *************************************
 
-        return true;
+//    File file = new File("readFile.txt");
+//    StringBuilder reading = new StringBuilder();
+//    try {
+//        Scanner scan = new Scanner(file);
+//        while (scan.hasNextLine()) {
+//            reading.append(scan.nextLine() + "\n");
+//        }
+//    } catch (FileNotFoundException e) {
+//        System.out.println("Brak pliku.");
+//    }
+//    System.out.println(reading.toString());
+
+//    -----------------------------------------------------
+
+//    Path path1 = Paths.get("path1.txt");
+//    try {
+//        for (String line : Files.readAllLines(path1)) {
+//            System.out.println(line);
+//        }
+//    } catch (IOException e) {
+//        e.printStackTrace();
+//    }
+
+
+
+//    WRITE TO FILE  ************************************************
+
+//    try (PrintWriter printWriter = new PrintWriter("writeFile.txt")) {
+//        printWriter.println("first line");
+//        printWriter.println("second line");
+//    } catch (FileNotFoundException ex) {
+//        System.out.println("Błąd zapisu do pliku.");
+//    }
+
+//try (FileWriter fileWriter = new FileWriter("writeFile.txt", true)){
+//        fileWriter.append("first line\n");
+//        fileWriter.append("second line\n");
+//    } catch (IOException ex) {
+//        System.out.println("Błąd zapisu do pliku.");
+//    }
+
+
+//    Path path1 = Paths.get("path1.txt");
+//    try {
+//        Files.writeString(path1, "some text");   StandardOpenOption.APPEND
+//    } catch (IOException ex) {
+//        System.out.println("Nie można zapisać pliku.");
+//    }
+
+public static boolean writeStringListToFile(String writeStr1, String writeStr2, String pathFile) {
+    Path path = Paths.get(pathFile);
+    List<String> outList = new ArrayList<>();
+    outList.add(writeStr1);
+    outList.add(writeStr2);
+    try {
+        Files.write(path, outList); //StandardOpenOption.APPEND
+    } catch (IOException ex) {
+        System.out.println("Nie można zapisać pliku.");
     }
-    public static String tableElementsToString() {
+    return true;
+}
 
-        return "true";
-    }
 
-    public boolean writeWordToFile() {
-
-        return true;
-    }
+//    public static String tableElementsToString() {
+//
+//
+//        return "true";
+//    }
+//
+//    public static boolean writeWordToFile() {
+//
+//        return true;
+//    }
 
     public static void printStringTable(String[] strTab) {
         for (String s : strTab) {
@@ -51,5 +121,4 @@ public class Lntool {
             System.out.println();
         }
     }
-
 }
