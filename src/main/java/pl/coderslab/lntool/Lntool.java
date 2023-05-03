@@ -1,4 +1,4 @@
-package pl.coderslab;
+package pl.coderslab.lntool;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -60,6 +60,32 @@ public class Lntool {
 //    } catch (IOException ex) {
 //        System.out.println("Nie można zapisać pliku.");
 //    }
+
+
+//    z egzamnu
+//
+//    public static void create(int max) {
+//    int n = getInt("Input number of partcipants: ");
+//    try (FileWriter fileWriter = new FileWriter("exam.txt", false)) {
+//        for (int i = 1; i <= n; i++) {
+//            fileWriter.append(getLogin("Podaj login: ")).append(" ");
+//            fileWriter.append(String.valueOf(getInt("Podaj ilość punktów: "))).append("\n");
+//        }
+//    } catch (IOException e) {
+//        e.printStackTrace();
+//    }
+//    File file = new File("exam.txt");
+//    try (Scanner scanner = new Scanner(file); FileWriter fileWriter = new FileWriter("exam_passed.txt", false)) {
+//        while (scanner.hasNextLine()) {
+//            String[] elements = scanner.nextLine().split(" ");
+//            if (Integer.parseInt(elements[1]) >= max * 0.60) {
+//                fileWriter.append(elements[0]).append(" ").append(elements[1]).append("\n");
+//            }
+//        }
+//    } catch (IOException e) {
+//        e.printStackTrace();
+//    }
+//}
 
 public static boolean writeStringListToFile(String writeStr1, String writeStr2, String pathFile) {
     Path path = Paths.get(pathFile);

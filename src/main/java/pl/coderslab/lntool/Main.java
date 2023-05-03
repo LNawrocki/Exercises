@@ -1,4 +1,4 @@
-package pl.coderslab;
+package pl.coderslab.lntool;
 
 public class Main {
     public static void main(String[] args) {
