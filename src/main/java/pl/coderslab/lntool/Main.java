@@ -15,6 +15,7 @@ public class Main {
                 {31, 32, 33}};
 
 
+
         Lntool.printIntTable(intTab);
         System.out.println();
 

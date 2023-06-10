@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Lntool {
 
+
 //    OPEN FROM FILE    *************************************
 
 //    File file = new File("readFile.txt");
